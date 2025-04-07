@@ -1,0 +1,72 @@
+#:kivy 2.0
+
+<TextInput>:
+    font_name: "arial-unicode-ms.ttf"
+
+<Label>:
+    font_name: "arial-unicode-ms.ttf"
+
+GridLayout:
+    rows: 3
+    rows_minimum: {1: root.height * 0.8}
+
+    GridLayout:
+        rows: 1
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_x: 0.2
+            TextInput:
+                id: search_input
+                size_hint_x: 0.8
+                multiline: False
+                on_text_validate: app.search()
+            Button:
+                size_hint_x: 0.2
+                on_press: app.search()
+                Image:
+                    source: 'res/search.jpg'
+                    y: self.parent.y
+                    x: self.parent.x
+                    size: self.parent.size
+                    stretch: True
+        Label:
+            size_hint_x: 0.72
+            text: "Illustration Links"
+        Button:
+            size_hint_x: 0.08
+            text: "+"
+            on_press: app.add_row()
+    ScrollView:
+        id: scroll
+        BoxLayout:
+            id: rows
+            orientation: "vertical"
+            size_hint_y: None
+            height: self.minimum_height
+            BoxLayout:
+                size_hint: (1.0, None)
+                height: 20
+                Label:
+                    text:"No"
+                    size_hint_x: 0.02
+                Label:
+                    text:"Illustration Url"
+                    size_hint_x: 0.15
+                Label:
+                    text:"Title"
+                    size_hint_x: 0.15
+                Label:
+                    text:"DL Format"
+                    size_hint_x: 0.15
+                Label:
+                    text:"Subdirectory"
+                    size_hint_x: 0.15
+    GridLayout:
+        cols: 1
+        rows: 1
+        Button:
+            text: "Start Download"
+            height: 200
+            width: 200
+            on_press: app.thread_download()
+		

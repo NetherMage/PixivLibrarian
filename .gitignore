@@ -1,0 +1,58 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.env.*
+
+# VSCode and other IDE/editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# macOS and Linux files
+.DS_Store
+*.swp
+*.swo
+
+# Log files
+*.log
+
+# Distribution / packaging / PyInstaller
+build/
+dist/
+*.egg-info/
+*.spec
+*.exe
+*.dll
+
+# Test cache
+.pytest_cache/
+.coverage
+.tox/
+.nox/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# MyPy / Pyre / Pytype
+.mypy_cache/
+.pyre/
+.pytype/
+
+# Cython / compiled extensions
+*.so
+*.pyd
+*.c
+*.cpp
+
+# Backup files
+*~
+*.bak
+
+# Custom ignore patterns
+config.local.py

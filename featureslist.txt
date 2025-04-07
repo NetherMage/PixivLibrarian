@@ -1,0 +1,26 @@
+User add a row
+User enter link
+Check if link valid
+Generate the filename
+User optional enter download formatter e.g. 1 (download only pg 1); 1,2 (download pg 1 and 2); 1-5 (download pg 1 to 5); 1, 3,-5 ();
+User enter the subdirectory
+User press download
+
+Subdirectory:
+config.py definee a root folder
+Program crawl all subdirectories and get all existing directories name into memory as list of name
+When user enter a text for subdirectory, pressing tab will automatch it into the closest fuzzy search text
+
+
+Download
+Validate subdirectory
+Process download formatter
+
+/DirA -> 'DirA
+/DirA/DirB -> 'DirB
+
+User type
+DirB
+DirB == 'DirB == /DirA/DirB
+
+DirA == 'DirA == /DirA
